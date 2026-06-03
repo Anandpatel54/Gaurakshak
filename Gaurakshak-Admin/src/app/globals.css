@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saffron-50: #fff5eb;
+  --color-saffron-100: #ffe6cc;
+  --color-saffron-500: #FF6B00;
+  --color-saffron-600: #E05A00;
+  --color-saffron-700: #B34800;
+  --color-gold-500: #FFD700;
+  --color-maroon-500: #800020;
+  --color-maroon-600: #6B0F1A;
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #F8F9FB;
+  color: #1F2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.admin-sidebar {
+  background-color: #111827;
+  color: #9CA3AF;
+}
+
+.admin-card {
+  background: #ffffff;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}

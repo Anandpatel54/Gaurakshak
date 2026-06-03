@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-saffron-50: #fff5eb;
+  --color-saffron-100: #ffe6cc;
+  --color-saffron-500: #FF6B00;
+  --color-saffron-600: #E05A00;
+  --color-saffron-700: #B34800;
+  --color-gold-100: #fef9c3;
+  --color-gold-500: #FFD700;
+  --color-gold-600: #E0BD00;
+  --color-maroon-500: #800020;
+  --color-maroon-600: #6B0F1A;
+  --color-cream-50: #FCF9F2;
+  --color-cream-100: #FFF8F0;
+  --color-cream-200: #F7EFE5;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-spiritual: var(--font-yatra-one), cursive;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream-50);
+  color: #2D2219;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.spiritual-text {
+  font-family: var(--font-spiritual);
+}
+
+/* Custom animations and utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(43, 20, 5, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orange-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF9F43 100%);
+}
+
+.saffron-gold-gradient {
+  background: linear-gradient(135deg, #FF6B00 0%, #FFD700 100%);
+}
+
+.maroon-gradient {
+  background: linear-gradient(135deg, #800020 0%, #B31E3F 100%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E05A00;
+}
+
+/* Custom CSS Keyframe Animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
+}
+
